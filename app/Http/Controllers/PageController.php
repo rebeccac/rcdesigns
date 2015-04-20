@@ -35,6 +35,11 @@ class PageController extends Controller {
 		return view('pages.about');
 	}
 
+	public function showGallery()
+	{
+		return view('pages.gallery');
+	}
+
 	public function create()
 	{
 		return view('pages.contact');

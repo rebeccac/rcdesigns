@@ -2,3 +2,8 @@
 /node_modules
 .env
 /config
+public/js/scripts.js
+resources/views/home2.blade.php
+resources/views/includes/footer2.blade.php
+resources/views/includes/head2.blade.php
+resources/views/includes/header2.blade.php

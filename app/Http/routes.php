@@ -27,6 +27,10 @@ Route::get('contact', [
 Route::post('contact',
   ['as' => 'contact_store', 'uses' => 'PageController@store']);
 
+Route::get('gallery', [
+	'middleware' => 'guest',
+	'as' => 'gallery', 'uses' => 'PageController@showGallery'
+	]);
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
