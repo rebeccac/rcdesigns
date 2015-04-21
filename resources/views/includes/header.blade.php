@@ -5,6 +5,7 @@ include(app_path().'/includes/common.php');
 $active_index = addActive('index', $page);
 $active_about = addActive('about', $page);
 $active_contact = addActive('contact', $page);
+$active_gallery = addActive('gallery', $page);
 
 ?>
 
@@ -27,7 +28,7 @@ $active_contact = addActive('contact', $page);
             <li class="menu-item"><a $class href="http://www.etsy.com" target="_blank">ETSY</a></li> |
             <li class="menu-item">SHOP</li> |
             <!-- <li class="menu-item"><a href="http://rcphotos.rebeccacordingley.com">GALLERY</a></li> | -->
-            <li class="menu-item"><a href="{{ URL::to('gallery') }}">GALLERY</a></li> |
+            <li class="menu-item"><a <?php echo $active_gallery ?>href="{{ URL::to('gallery') }}">GALLERY</a></li> |
             <li class="menu-item"><a <?php echo $active_contact ?> href="{{URL::to('contact') }}">CONTACT</a></li> |
             <li class="menu-item">WEB DEVELOPMENT</li>
         </ul>

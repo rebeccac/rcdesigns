@@ -7,5 +7,7 @@ function addActive($title, $page) {
 $active_index = addActive('index', $page);
 $active_about = addActive('about', $page);
 $active_contact = addActive('contact', $page);
+$active_gallery = addActive('gallery', $page);
+
 
 ?>
