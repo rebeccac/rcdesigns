@@ -5,29 +5,73 @@
     <h2>Gallery</h2>
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-            <div class="gallery">
-                <a class="image gallery-img" tabindex="1"><img class="img" src="{{asset('images/gaia.png')}}" alt="Gaia"></a>
-                <a class="image" tabindex="2"><img class="img" src="{{asset('images/goldrush.png')}}" alt="Gaia" class="gallery-img"></a>
-                <a class="image" tabindex="3"><img class="img" src="{{asset('images/seanymph.png')}}" alt="Gaia" class="gallery-img"></a>
-                <a class="image" tabindex="4"><img class="img" src="{{asset('images/mystic.png')}}" alt="Gaia" class="gallery-img"></a>
+            <section>
+				<ul class="lb-album">
+					<li>
+						<a href="#image-1">
+							<img src="{{asset('images/gaia.png')}}" alt="Gaia">
+							<span>Gaia</span>
+						</a>
+						<div class="lb-overlay" id="image-1">
+							<div class="lb-overlay-box">
+                                <a href="#page" class="lb-close">x</a>
+                                <img src="{{asset('images/gaia.png')}}" alt="Gaia">
+							    <div class="title">
+								    <h3>Gaia</h3>
+                                    <a href="#image-10" class="lb-prev">< Prev</a>
+    				                <a href="#image-2" class="lb-next">Next ></a>
+							    </div>
+                            </div>
+						</div>
+					</li>
+					<li>
+						<a href="#image-2">
+							<img src="{{asset('images/goldrush.png')}}" alt="Gaia">
+							<span>Goldrush</span>
+						</a>
+						<div class="lb-overlay" id="image-2">
+                            <div class="lb-overlay-box">
+                                <a href="#page" class="lb-close">x</a>
+							    <img src="{{asset('images/goldrush.png')}}" alt="Goldrush" >
+							    <div class="title">
+				                    <h3>Goldrush</h3>
+                                </div>
+							</div>
+                        </div>
 
-                <a class="image" tabindex="5"><img class="img" src="{{asset('images/spiral.png')}}" alt="Gaia" class="gallery-img"></a>
-                <a class="image" tabindex="6"><img class="img" src="{{asset('images/ambrosia.png')}}" alt="Gaia" class="gallery-img"></a>
-                <a class="image" tabindex="7"><img class="img" src="{{asset('images/gaia.png')}}" alt="Gaia" class="gallery-img"></a>
-                <a class="image" tabindex="8"><img class="img" src="{{asset('images/gaia.png')}}" alt="Gaia" class="gallery-img"></a>
-
-                <a class="image" tabindex="9"><img class="img" src="{{asset('images/gaia.png')}}" alt="Gaia" class="gallery-img"></a>
-                <a class="image" tabindex="10"><img class="img" src="{{asset('images/goldrush.png')}}" alt="Gaia" class="gallery-img"></a>
-                <a class="image" tabindex="11"><img class="img" src="{{asset('images/seanymph.png')}}" alt="Gaia" class="gallery-img"></a>
-                <a class="image" tabindex="12"><img class="img" src="{{asset('images/mystic.png')}}" alt="Gaia" class="gallery-img"></a>
-
-                <a class="image" tabindex="13"><img class="img" src="{{asset('images/spiral.png')}}" alt="Gaia" class="gallery-img"></a>
-                <a class="image" tabindex="14"><img class="img" src="{{asset('images/ambrosia.png')}}" alt="Gaia" class="gallery-img"></a>
-                <a class="image" tabindex="15"><img class="img" src="{{asset('images/gaia.png')}}" alt="Gaia" class="gallery-img"></a>
-                <a class="image" tabindex="16"><img class="img" src="{{asset('images/gaia.png')}}" alt="Gaia" class="gallery-img"></a>
-
-                <span class="exit">x</span>
-            </div><!-- gallery -->
+					</li>
+					<li>
+						<a href="#image-3">
+							<img src="{{asset('images/mystic.png')}}" alt="Gaia">
+							<span>Mystic</span>
+						</a>
+						<div class="lb-overlay" id="image-3">
+                            <div class="lb-overlay-box">
+                                <a href="#page" class="lb-close">x</a>
+							    <img src="{{asset('images/mystic.png')}}" alt="Mystic" >
+							    <div class="title">
+								    <h3>Mystic</h3>
+							    </div>
+                            </div>
+                        </div>
+					</li>
+					<li>
+						<a href="#image-4">
+							<img src="{{asset('images/spiral.png')}}" alt="Gaia">
+							<span>Spiral</span>
+						</a>
+						<div class="lb-overlay" id="image-4">
+                            <div class="lb-overlay-box">
+                                <a href="#page" class="lb-close">x</a>
+							    <img src="{{asset('images/spiral.png')}}" alt="Spiral">
+							    <div class="title">
+								    <h3>Spiral</h3>
+							    </div>
+                            </div>
+						</div>
+					</li>
+                </ul>
+            </section>
         </div>
     </div>
 
