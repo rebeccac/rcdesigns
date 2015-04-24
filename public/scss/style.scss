@@ -299,33 +299,30 @@ form {
     -o-transition: background-color 1s linear;
 }
 
+
 .lb-overlay .lb-overlay-box {
-    width: 600px;
+    width: 640px;
     height: auto;
     margin: 0 auto;
-    /* background-color: red; */
 }
 
-.lb-overlay .lb-overlay-box .title{
+.lb-overlay .lb-overlay-box .lb-details{
 	position: relative;
     color: $trans_off_white;
 	width: 600px;
-	/* height: 80px; */
-	margin: 40px auto 0px auto;
+	margin: 70px auto 0px auto;
 }
-.lb-overlay .lb-overlay-box .title h3{
-	padding: 0px 20px;
+.lb-overlay .lb-overlay-box .lb-details h3.title{
     text-align: center;
 	height: 60px;
     font-size: 2.4em;
-
 }
 
-.lb-overlay .lb-overlay-box .title h3 span{
+.lb-overlay .lb-overlay-box .lb-details h3.title span{
 	display: block;
 	line-height: 6px;
 }
-.lb-overlay .lb-overlay-box .title p{
+.lb-overlay .lb-overlay-box .lb-details p{
     font-size: 0.85em;
 	text-align: left;
 	float: left;
@@ -355,11 +352,49 @@ form {
     margin-top: 40px;
 	position: relative;
 	opacity: 0;
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
 	box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
 	transition: opacity 0.5s linear;
 }
+
+
+.lb-overlay .lb-overlay-box .lb-nav{
+	position: relative;
+    left: -15px;
+    color: $trans_off_white;
+	width: 500px;
+	margin: 10px auto 0px auto;
+}
+
+.lb-overlay-box .lb-nav .prev,
+.lb-overlay-box .lb-nav .next {
+    width: 250px;
+}
+
+
+.lb-overlay-box .lb-nav .prev .lb-prev,
+.lb-overlay-box .lb-nav .next .lb-next{
+    position: absolute;
+    /* height: 25px; */
+    /* opacity: 0.8; */
+/*     border: 1px solid $trans_off_white;*/
+    &:link, &:hover, &:active, &:visited {
+        text-decoration: none;
+        color: $trans_off_white;
+        font-size: 4em;
+
+    }
+}
+.lb-overlay-box .lb-nav .prev .lb-prev {
+    left: 0;
+    text-align: left;
+}
+.lb-overlay-box .lb-nav .lb-next {
+    right: 0;
+    text-align: right;
+}
+
 
 .lb-overlay-box .title .lb-prev, .lb-next{
 	position: absolute;
@@ -370,10 +405,14 @@ form {
 }
 .lb-overlay-box .title .lb-prev {
     left: 0;
+
 }
 .lb-overlay-box .title .lb-next {
     right: 0;
+
 }
+
+
 .lb-overlay-box .title .lb-prev:hover, .lb-next:hover{
 	opacity: 1;
 }

@@ -16,10 +16,16 @@
 							<div class="lb-overlay-box">
                                 <a href="#page" class="lb-close">x</a>
                                 <img src="{{asset('images/gaia.png')}}" alt="Gaia">
-							    <div class="title">
-								    <h3>Gaia</h3>
-                                    <a href="#image-10" class="lb-prev">< Prev</a>
-    				                <a href="#image-2" class="lb-next">Next ></a>
+                                <div class="lb-nav">
+                                    <div class="prev">
+                                    <a href="#image-10" class="lb-prev">&laquo;</a>
+                                </div>
+                                <div class="next">
+    				                <a href="#image-2" class="lb-next">&raquo;</a>
+                                </div>
+                                </div>
+							    <div class="lb-details">
+								    <h3 class="title">Gaia</h3>
 							    </div>
                             </div>
 						</div>
