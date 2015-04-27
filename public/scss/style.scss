@@ -311,16 +311,24 @@ form {
     color: $trans_off_white;
 	width: 600px;
 	margin: 70px auto 0px auto;
+    margin-left: -3px;
 }
 .lb-overlay .lb-overlay-box .lb-details h3.title{
     text-align: center;
 	height: 60px;
     font-size: 2.4em;
+
 }
 
-.lb-overlay .lb-overlay-box .lb-details h3.title span{
+.lb-overlay .lb-overlay-box .lb-details span.gallery-description{
 	display: block;
-	line-height: 6px;
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    color: $trans_off_white;
+    text-align: center;
+    font-style: italic;
 }
 .lb-overlay .lb-overlay-box .lb-details p{
     font-size: 0.85em;
