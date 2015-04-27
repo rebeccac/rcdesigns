@@ -37,7 +37,9 @@ class PageController extends Controller {
 
 	public function showGallery()
 	{
-		return view('pages.gallery');
+
+		$images = \DB::select('select * from gallery');
+		return view('pages.gallery', ['images' => $images]);
 	}
 
 	public function create()
