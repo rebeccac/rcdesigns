@@ -30,7 +30,7 @@
                                         else {
                                             echo "#image-".($i - 1);
                                         } ?>
-                                        class="lb-prev">&laquo;</a>
+                                        class="lb-prev">&larr;</a>
                                     </div>
                                     <div class="next">
                                         <a href=<?php
@@ -40,7 +40,7 @@
                                         else {
                                             echo "#image-".($i + 1);
                                         } ?>
-                                        class="lb-next">&raquo;</a>
+                                        class="lb-next">&rarr;</a>
                                     </div>
                                 </div>
                                 <div class="lb-details">
@@ -53,6 +53,12 @@
                     <?php $i++; ?>
                 @endforeach
                 </ul>
+
+                <div class="clear"></div>
+
+                <div class="page-nav">
+                    <?php echo $images->render(); ?>
+                </div>
             </section>
         </div>
     </div>
