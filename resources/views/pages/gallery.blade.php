@@ -6,6 +6,9 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <section>
+                <div class="page-nav">
+                    <?php echo $images->render(); ?>
+                </div>
 				<ul class="lb-album">
                     <?php
                     $i = 0;
@@ -18,9 +21,11 @@
                             <span>{{$image->title}}</span>
                         </a>
                         <div class="lb-overlay" id=<?php echo "image-".$i ?>>
-                            <div class="lb-overlay-box">
-                                <a href="#page" class="lb-close">x</a>
-                                <img src="{{asset('images/'.$image->url)}}" alt="$image->alt">
+
+                            <div class="lb-overlay-top">
+                                <a href="#page" class="lb-close">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </a>
                                 <div class="lb-nav">
                                     <div class="prev">
                                         <a href=<?php
@@ -43,6 +48,14 @@
                                         class="lb-next">&rarr;</a>
                                     </div>
                                 </div>
+
+
+
+                            </div>
+
+                            <div class="lb-overlay-box">
+
+                                <img src="{{asset('images/'.$image->url)}}" alt="$image->alt">
                                 <div class="lb-details">
                                     <h3 class="title">{{$image->title}}</h3>
                                     <span class="gallery-description">{{$image->description}}</span>
