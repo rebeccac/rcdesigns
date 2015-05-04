@@ -1,5 +1,7 @@
 <?php
-include(app_path().'/includes/common.php');
+// include(app_path().'/includes/common.php');
+
+use App\includes;
 
 // check if current page matches var and add active class to current menu item
 $active_index = addActive('index', $page);
@@ -10,7 +12,8 @@ $active_gallery = addActive('gallery', $page);
 ?>
 
 <header class="header">
-    <h2 class="logo">RJC</h2>
+    <!-- <h2 class="logo">RJC</h2> -->
+    <img src="{{asset('images/logo3.png')}}" alt="RC logo" class="logo-img">
     <h1 class="title"><a href="{{ URL::to('/') }}">REBECCA CORDINGLEY DESIGNS</a></h1>
 
     <ul class="s-m-i">
@@ -27,11 +30,12 @@ $active_gallery = addActive('gallery', $page);
             <li class="menu-item"><a <?php echo $active_about ?> href="{{ URL::to('about') }}">ABOUT</a></li> |
             <li class="menu-item"><a $class href="http://www.etsy.com" target="_blank">ETSY</a></li> |
             <li class="menu-item">SHOP</li> |
-            <!-- <li class="menu-item"><a href="http://rcphotos.rebeccacordingley.com">GALLERY</a></li> | -->
             <li class="menu-item"><a <?php echo $active_gallery ?>href="{{ URL::to('gallery') }}">GALLERY</a></li> |
             <li class="menu-item"><a <?php echo $active_contact ?> href="{{URL::to('contact') }}">CONTACT</a></li> |
             <li class="menu-item">WEB DEVELOPMENT</li>
         </ul>
     </nav>
+
+    <!-- <h1 class="title"><a href="{{ URL::to('/') }}">REBECCA CORDINGLEY DESIGNS</a></h1> -->
 
 </header>

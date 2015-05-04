@@ -1,15 +1,30 @@
+
 @extends('layouts.layout')
-<?php $page = 'gallery'; ?>
+<?php $page = 'gallery';?>
 @section('content')
 <div class="content">
     <h2>Gallery</h2>
+
+<?php
+
+    list($width, $height, $type, $attr) = getimagesize("http://rebeccacordingley.com/rcphotos/images/ambrosia.jpg");
+
+echo "Image width " . $width . "<br>";
+echo "Image height " . $height . "<br>";
+echo "Image type " . $type . "<br>";
+echo "Attribute " . $attr . "<br>";
+   ?>
+
+
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <section>
+
+
                 <div class="page-nav">
                     <?php echo $images->render(); ?>
                 </div>
-				<ul class="lb-album">
+				<ul class="rc-album">
                     <?php
                     $i = 0;
                     $count = count($images);
@@ -20,13 +35,12 @@
                             <img src="{{asset('images/'.$image->url)}}" alt="{{$image->alt}}">
                             <span>{{$image->title}}</span>
                         </a>
-                        <div class="lb-overlay" id=<?php echo "image-".$i ?>>
-
-                            <div class="lb-overlay-top">
-                                <a href="#page" class="lb-close">
+                        <div class="rc-overlay" id=<?php echo "image-".$i ?>>
+                            <div class="rc-overlay-top">
+                                <a href="#page" class="rc-close">
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
-                                <div class="lb-nav">
+                                <div class="rc-nav">
                                     <div class="prev">
                                         <a href=<?php
                                         if ($i == 0) {
@@ -35,7 +49,7 @@
                                         else {
                                             echo "#image-".($i - 1);
                                         } ?>
-                                        class="lb-prev">&larr;</a>
+                                        class="rc-prev">&larr;</a>
                                     </div>
                                     <div class="next">
                                         <a href=<?php
@@ -45,7 +59,7 @@
                                         else {
                                             echo "#image-".($i + 1);
                                         } ?>
-                                        class="lb-next">&rarr;</a>
+                                        class="rc-next">&rarr;</a>
                                     </div>
                                 </div>
 
@@ -53,10 +67,14 @@
 
                             </div>
 
-                            <div class="lb-overlay-box">
+                            <div class="rc-overlay-box">
+                                <div class="load">
+                                    <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+
+                                </div>
 
                                 <img src="{{asset('images/'.$image->url)}}" alt="$image->alt">
-                                <div class="lb-details">
+                                <div class="rc-details">
                                     <h3 class="title">{{$image->title}}</h3>
                                     <span class="gallery-description">{{$image->description}}</span>
                                 </div>
