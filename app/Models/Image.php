@@ -2,9 +2,9 @@
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model {
+class Image extends Model {
 
-    public static function queryValues($images) {
-
-    }
+    // public static function queryValues($images) {
+    //
+    // }
 }

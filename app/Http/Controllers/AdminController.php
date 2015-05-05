@@ -57,6 +57,14 @@ class AdminController extends Controller {
 	      $fileName = rand(11111,99999).'.'.$extension; // renameing image
 	      Input::file('image')->move($destinationPath, $fileName); // uploading file to given path
 
+		  // save photo to DB
+		  $photo = new \App\Models\Photo;
+		  $photo->url = $fileName;
+		  $photo->title = 'Title';
+		  $photo->alt = 'Alt';
+		  $photo->description = 'Description';
+		  $photo->save();
+
 		  // set name of file as Session variable and redirect back to upload page with success message
 		  Session::set('filename', $fileName);
 	      Session::flash('success', 'Upload successfully');
