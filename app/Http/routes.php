@@ -32,6 +32,20 @@ Route::get('gallery', [
 	'as' => 'gallery', 'uses' => 'PageController@showGallery'
 	]);
 
+Route::get('admin', [
+	'middleware' => 'auth',
+	'as' => 'admin', 'uses' => 'AdminController@showAdmin'
+	]);
+
+
+Route::get('admin/upload', function() {
+    return View::make('admin.upload');
+});
+
+// Post back to admin/upload after submitting an image for upload
+Route::post('admin/upload', 'AdminController@upload');
+
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
