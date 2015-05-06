@@ -21,20 +21,17 @@ Route::post('contact',
 
 Route::get('gallery', 'PhotoController@showGallery');
 
-Route::get('admin', [
-	'middleware' => 'auth',
-	// 'middleware' => 'guest',
-	'as' => 'admin', 'uses' => 'AdminController@showAdmin'
-	]);
+// Routes requiring authentication
+Route::group(['middleware' => 'auth'], function()
+{
+	Route::get('admin', 'AdminController@showAdmin');
+	Route::get('admin/upload', function() {
+    	return View::make('admin.upload');
+	});
+	// Post back to /admin/upload after submitting an image for upload
+	Route::post('admin/upload', 'AdminController@upload');
 
-
-Route::get('admin/upload', function() {
-    return View::make('admin.upload');
 });
-
-// Post back to /admin/upload after submitting an image for upload
-Route::post('admin/upload', 'AdminController@upload');
-
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
